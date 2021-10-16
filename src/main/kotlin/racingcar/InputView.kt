@@ -1,6 +1,6 @@
 package racingcar
 
 interface InputView {
-    fun getNumberOfCars(): Int
-    fun getNumberOfTrials(): Int
+    fun getNumberOfCars(): NumberOfCars
+    fun getNumberOfTrials(): NumberOfTrials
 }
