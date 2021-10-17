@@ -1,4 +1,6 @@
-package racingcar
+package racingcar.domain
+
+import racingcar.service.CarMoveForwardDecider
 
 class Cars(carNames: CarNames) {
     private var racingCars: List<Car> = ArrayList()

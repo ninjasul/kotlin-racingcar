@@ -1,4 +1,8 @@
-package racingcar
+package racingcar.domain
+
+import racingcar.service.CarMoveForwardDecider
+import racingcar.view.input.InputView
+import racingcar.view.result.ResultView
 
 class RacingGame(
     inputView: InputView,

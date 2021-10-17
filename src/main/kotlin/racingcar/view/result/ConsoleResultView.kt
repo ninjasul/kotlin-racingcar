@@ -1,5 +1,7 @@
-package racingcar
+package racingcar.view.result
 
+import racingcar.domain.Car
+import racingcar.domain.Cars
 import java.util.stream.Collectors.joining
 
 class ConsoleResultView : ResultView {

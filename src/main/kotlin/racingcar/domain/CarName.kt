@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.domain
 
 class CarName(val value: String? = "") {
 

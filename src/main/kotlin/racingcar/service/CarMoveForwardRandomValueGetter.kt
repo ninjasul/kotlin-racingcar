@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.service
 
 class CarMoveForwardRandomValueGetter : CarMoveForwardValueGetter {
     override fun get(): Int {

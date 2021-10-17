@@ -1,4 +1,7 @@
-package racingcar
+package racingcar.view.input
+
+import racingcar.domain.CarNames
+import racingcar.domain.NumberOfTrials
 
 class ConsoleInputView : InputView {
     companion object {

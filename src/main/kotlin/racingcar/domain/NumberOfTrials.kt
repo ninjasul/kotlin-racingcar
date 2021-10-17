@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.domain
 
 data class NumberOfTrials(val value: Int? = 0) {
     companion object {

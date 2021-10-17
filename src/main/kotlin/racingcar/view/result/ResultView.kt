@@ -1,4 +1,6 @@
-package racingcar
+package racingcar.view.result
+
+import racingcar.domain.Cars
 
 interface ResultView {
     fun showTitle()
