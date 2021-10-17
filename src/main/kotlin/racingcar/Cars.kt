@@ -5,7 +5,7 @@ class Cars(carNames: CarNames) {
 
     init {
         racingCars = carNames
-            .getCarNames()
+            .carNames
             .map { name -> Car(name) }
             .toList()
     }
@@ -19,10 +19,18 @@ class Cars(carNames: CarNames) {
         return this.racingCars
     }
 
+    fun getCar(index: Int): Car {
+        if (index < 0 || index >= racingCars.size) {
+            throw ArrayIndexOutOfBoundsException()
+        }
+
+        return this.racingCars[index]
+    }
+
     fun getWinners(): List<Car> {
         val maximumPosition = this.racingCars
-            .map { it -> it.position }
-            .maxOrNull()
+            .map { it.position }
+            .maxOrNull() ?: 0
 
         val (winners, _) = racingCars.partition { it.position == maximumPosition }
         return winners

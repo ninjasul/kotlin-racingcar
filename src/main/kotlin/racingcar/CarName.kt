@@ -1,6 +1,6 @@
 package racingcar
 
-class CarName(val value: String) {
+class CarName(val value: String? = "") {
 
     companion object {
         const val MAXIMUM_CAR_NAME_LEGNTH = 5
@@ -8,6 +8,6 @@ class CarName(val value: String) {
     }
 
     init {
-        require(value.isNotBlank() && value.length <= MAXIMUM_CAR_NAME_LEGNTH) { ENTERED_WRONG_CAR_NAME }
+        require(value != null && value.isNotBlank() && value.length <= MAXIMUM_CAR_NAME_LEGNTH) { ENTERED_WRONG_CAR_NAME }
     }
 }

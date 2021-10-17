@@ -2,28 +2,24 @@ package racingcar
 
 import java.util.stream.Collectors.toList
 
-class CarNames(input: String?) {
-    private var carNames: List<CarName> = ArrayList()
+class CarNames(val carNames: List<CarName>) {
 
     companion object {
-        const val CAR_NAME_DELIMITER = ","
-        const val ENTERED_WRONG_CAR_NAMES = "자동차 이름들을 올바르게 입력하세요."
-    }
+        private const val CAR_NAME_DELIMITER = ","
+        private const val ENTERED_WRONG_CAR_NAMES = "자동차 이름들을 올바르게 입력하세요."
 
-    init {
-        require(input != null && input.isNotBlank()) { ENTERED_WRONG_CAR_NAMES }
+        fun from(input: String?): CarNames {
+            require(input != null && input.isNotBlank()) { ENTERED_WRONG_CAR_NAMES }
+            return CarNames(collectCarNames(input))
+        }
 
-        this.carNames = input.split(CAR_NAME_DELIMITER)
+        private fun collectCarNames(input: String) = input.split(CAR_NAME_DELIMITER)
             .stream()
             .map { CarName(it.trim()) }
             .collect(toList())
     }
 
-    fun getCarNames(): List<CarName> {
-        return carNames
-    }
-
-    fun getSize(): Int {
+    fun size(): Int {
         return carNames.size
     }
 }
