@@ -12,7 +12,7 @@ class Cars(carNames: CarNames) {
             .toList()
     }
 
-    fun goForward(carMoveForwardDecider: CarMoveForwardDecider) {
+    fun moveForward(carMoveForwardDecider: CarMoveForwardDecider) {
         racingCars
             .forEach { car -> car.moveForward(carMoveForwardDecider) }
     }

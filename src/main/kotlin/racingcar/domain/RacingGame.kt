@@ -16,7 +16,7 @@ class RacingGame(
     fun proceed() {
         resultView.showTitle()
         repeat(numberOfTrials.value!!) {
-            cars.goForward(carMoveForwardStrategy)
+            cars.moveForward(carMoveForwardStrategy)
             resultView.showStatuses(cars)
         }
         resultView.showWinners(cars)
