@@ -21,7 +21,7 @@ class ConsoleResultView : ResultView {
     }
 
     private fun showStatus(car: Car) {
-        print("%s : ".format(car.name.value))
+        print("%5s : ".format(car.name.value))
         for (index in (1..car.position)) {
             print(CAR_POSITION_CHARACTER)
         }
